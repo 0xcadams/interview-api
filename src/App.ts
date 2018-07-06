@@ -35,7 +35,7 @@ class App {
       });
     });
 
-    const message = `I can do much more than just say 'Welcome!', but I'm trapped in Docker and can't get out!`;
+    const message = "I can do much more than just say 'Welcome!', but I'm trapped in Docker and can't get out!";
     const secondMessage = "Sorry, I don't have any Swagger docs, but I am running in Node.";
 
     let count = 0;
