@@ -27,14 +27,17 @@ class App {
 
   // Configure API endpoints.
   private routes(): void {
-    /* This is just to get up and running, and to make sure what we've got is
-     * working so far. This function will change when we start to add more
-     * API endpoints */
     const router = express.Router();
-    // placeholder route handler
+    // root handlers
     router.get("/", (req, res, next) => {
       res.json({
+        href: "/more-info",
         message: "Welcome!",
+      });
+    });
+    router.get("/more-info", (req, res, next) => {
+      res.json({
+        message: "I'm trapped in Docker and can't get out!",
       });
     });
     this.express.use("/", router);

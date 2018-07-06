@@ -20,17 +20,17 @@ class HeroRouter {
      */
     getOne(req, res, next) {
         const query = parseInt(req.params.id, 10);
-        const hero = data.heroes.find(h => h.id === query);
+        const hero = data.heroes.find((h) => h.id === query);
         if (hero) {
             return res.status(200).send({
                 hero,
-                status: res.status
+                status: res.status,
             });
         }
         else {
             return res.status(404).send({
                 message: "No hero found with the given id.",
-                status: res.status
+                status: res.status,
             });
         }
     }
