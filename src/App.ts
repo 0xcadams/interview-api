@@ -34,13 +34,12 @@ class App {
     // placeholder route handler
     router.get("/", (req, res, next) => {
       res.json({
-        message: "Hello World!",
+        message: "Welcome!",
       });
     });
     this.express.use("/", router);
-    this.express.use("/api/v1/heroes", HeroRouter);
+    this.express.use("/api/v1/hero", HeroRouter);
   }
-
 }
 
 export default new App().express;

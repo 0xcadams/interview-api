@@ -1,5 +1,5 @@
-import {NextFunction, Request, Response, Router} from "express";
-import * as data from "./data.json";
+import { NextFunction, Request, Response, Router } from "express";
+const data = require("./data.json"); // tslint:disable-line
 
 export class HeroRouter {
   public router: Router;
@@ -9,14 +9,13 @@ export class HeroRouter {
    */
   constructor() {
     this.router = Router();
-    this.init();
   }
 
   /**
    * GET all Heroes.
    */
   public getAll(req: Request, res: Response, next: NextFunction) {
-    res.send(data);
+    return res.send(data);
   }
 
   /**
@@ -24,20 +23,17 @@ export class HeroRouter {
    */
   public getOne(req: Request, res: Response, next: NextFunction) {
     const query = parseInt(req.params.id, 10);
-    const hero = data.find((h) => h.id === query);
+    const hero = data.heroes.find((h) => h.id === query);
     if (hero) {
-      res.status(200)
-        .send({
-          hero,
-          message: "Success",
-          status: res.status,
-        });
+      return res.status(200).send({
+        hero,
+        status: res.status,
+      });
     } else {
-      res.status(404)
-        .send({
-          message: "No hero found with the given id.",
-          status: res.status,
-        });
+      return res.status(404).send({
+        message: "No hero found with the given id.",
+        status: res.status,
+      });
     }
   }
 
@@ -49,7 +45,6 @@ export class HeroRouter {
     this.router.get("/", this.getAll);
     this.router.get("/:id", this.getOne);
   }
-
 }
 
 // Create the HeroRouter, and export its configured Express.Router

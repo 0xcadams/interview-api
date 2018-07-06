@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "gulp scripts",
+    "build": "gulp build",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
-    "start": "node dist/index.js",
+    "serve": "node dist/index.js",
+    "start": "gulp start",
     "test": "mocha --reporter spec --compilers ts:ts-node/register 'test/**/*.test.ts'"
   },
   "keywords": [],
@@ -24,6 +25,7 @@
     "chai": "^3.5.0",
     "chai-http": "^3.0.0",
     "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
     "gulp-typescript": "^3.1.1",
     "mocha": "^3.1.2",
     "ts-node": "^3.3.0",
