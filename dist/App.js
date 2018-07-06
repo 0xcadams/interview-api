@@ -28,10 +28,21 @@ class App {
                 message: "Welcome!",
             });
         });
+        const secondMessage = "Sorry, I don't have any Swagger docs.";
+        const message = `I can do much more than just say 'Welcome!', but I'm trapped in Docker and can't get out!`;
+        let count = 0;
         router.get("/more-info", (req, res, next) => {
-            res.json({
-                message: "I'm trapped in Docker and can't get out!",
-            });
+            if (count % 2 === 0) {
+                res.json({
+                    message,
+                });
+            }
+            else {
+                res.json({
+                    message: secondMessage,
+                });
+            }
+            count++;
         });
         this.express.use("/", router);
         this.express.use("/api/v1/hero", HeroRouter_1.default);

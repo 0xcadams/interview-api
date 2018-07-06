@@ -12,12 +12,9 @@ EXPOSE 3000
 # Set a working directory
 WORKDIR /usr/src/app
 
-# Install Node.js dependencies
-COPY package.json yarn.lock ./
+# Copy all files, to help the interviewee
+COPY ./ ./
 RUN yarn install
-
-# Attempts to copy "dist" folder
-COPY ./dist/ ./dist/
 
 # switch to node user for security purposes
 # https://github.com/nodejs/docker-node/blob/master/docs/BestPractices.md#non-root-user

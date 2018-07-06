@@ -7,7 +7,6 @@ import HeroRouter from "./routes/HeroRouter";
 
 // Creates and configures an ExpressJS web server.
 class App {
-
   // ref to Express instance
   public express: express.Application;
 
@@ -35,10 +34,23 @@ class App {
         message: "Welcome!",
       });
     });
+
+    const message = `I can do much more than just say 'Welcome!', but I'm trapped in Docker and can't get out!`;
+    const secondMessage = "Sorry, I don't have any Swagger docs, but I am running in Node.";
+
+    let count = 0;
+
     router.get("/more-info", (req, res, next) => {
-      res.json({
-        message: "I'm trapped in Docker and can't get out!",
-      });
+      if (count % 2 === 0) {
+        res.json({
+          message,
+        });
+      } else {
+        res.json({
+          message: secondMessage,
+        });
+      }
+      count++;
     });
     this.express.use("/", router);
     this.express.use("/api/v1/hero", HeroRouter);
