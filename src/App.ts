@@ -3,7 +3,7 @@ import * as express from "express";
 import * as logger from "morgan";
 import * as path from "path";
 
-import HeroRouter from "./routes/HeroRouter";
+import StartupRouter from "./routes/StartupRouter";
 
 // Creates and configures an ExpressJS web server.
 class App {
@@ -35,6 +35,7 @@ class App {
       });
     });
 
+    // messages to display to the user at /more-info
     const message = "I can do much more than just say 'Welcome!', but I'm trapped in Docker and can't get out!";
     const secondMessage = "Sorry, I don't have any Swagger docs, but I am running in Node.";
 
@@ -53,7 +54,7 @@ class App {
       count++;
     });
     this.express.use("/", router);
-    this.express.use("/api/v1/hero", HeroRouter);
+    this.express.use("/api/v1/startup", StartupRouter);
   }
 }
 
