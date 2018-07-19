@@ -1,5 +1,6 @@
 import * as bodyParser from "body-parser";
 import * as express from "express";
+import * as helmet from "helmet";
 import * as logger from "morgan";
 import * as serverlessExpress from "serverless-express/express";
 
@@ -19,6 +20,7 @@ class App {
 
   // Configure Express middleware.
   private middleware(): void {
+    this.express.use(helmet());
     this.express.use(logger("dev"));
     this.express.use(bodyParser.json());
     this.express.use(bodyParser.urlencoded({ extended: false }));
