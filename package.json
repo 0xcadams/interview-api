@@ -1,7 +1,7 @@
 {
-  "name": "typescript-node-api",
-  "version": "1.0.1",
-  "description": "",
+  "name": "interview-api",
+  "version": "0.0.1",
+  "description": "Simple API with a twist, to challenge interviewees with creative thinking.",
   "main": "index.js",
   "scripts": {
     "build": "gulp build",
@@ -10,9 +10,29 @@
     "start": "gulp start",
     "test": "mocha --reporter spec --compilers ts:ts-node/register 'test/**/*.test.ts'"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "homepage": "https://github.com/chase-adams/interview-api#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chase-adams/interview-api.git"
+  },
+  "contributors": [
+    "Chase Adams (https://twitter.com/_chase_adams)"
+  ],
+  "keywords": [
+    "interview",
+    "whiteboard",
+    "typescript",
+    "node",
+    "hiring",
+    "hiring-without-whiteboards"
+  ],
+  "bugs": {
+    "url": "https://github.com/chase-adams/interview-api/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "devDependencies": {
     "@types/body-parser": "0.0.33",
     "@types/chai": "^3.4.34",
