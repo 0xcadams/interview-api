@@ -7,7 +7,6 @@ jobs:
         - docker
       script:
         - docker build -t cadamsio/interview-api .
-        - yarn install
         - yarn semantic-release
 
 stages:

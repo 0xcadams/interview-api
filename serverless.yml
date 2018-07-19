@@ -1,0 +1,22 @@
+service: interview-api
+
+plugins:
+  - serverless-offline
+  - serverless-express
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: us-east-1
+  memorySize: 128
+  versionFunctions: false
+
+functions:
+  app:
+    handler: src/handler.handler
+    environment:
+      SERVERLESS: "true"
+    events:
+      - http:
+          path: /{proxy+}
+          method: ANY

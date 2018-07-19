@@ -3,10 +3,17 @@ const startupsJson = require("./startups.json"); // tslint:disable-line
 
 const failureRate = 0.3;
 const internalServerErrorResponse = {
-  message: "Random internal server error."
+  message: "Random internal server error.",
 };
 const internalServerErrorResponse2 = {
-  errors: [{ error: "An internal server error occurred." }]
+  errors: [{ error: "An internal server error occurred." }],
+};
+
+const respondWithError = (res) => {
+  if (Math.random() < 0.5) {
+    return res.status(500).send(internalServerErrorResponse);
+  }
+  return res.status(500).send(internalServerErrorResponse2);
 };
 
 export class StartupRouter {
@@ -24,7 +31,7 @@ export class StartupRouter {
    */
   public getAll(req: Request, res: Response, next: NextFunction) {
     if (Math.random() < failureRate) {
-      return this.respondWithError(res);
+      return respondWithError(res);
     }
     return res.send(startupsJson);
   }
@@ -36,21 +43,14 @@ export class StartupRouter {
     const query = parseInt(req.params.arrayIndex, 10);
     const startup = startupsJson.startups[query];
     if (Math.random() < failureRate) {
-      return this.respondWithError(res);
+      return respondWithError(res);
     } else if (startup) {
       return res.status(200).send(startup);
     } else {
       return res.status(404).send({
-        message: "No startup found with the given array index."
+        message: "No startup found with the given array index.",
       });
     }
-  }
-
-  private respondWithError(res) {
-    if (Math.random() < 0.5) {
-      return res.status(500).send(internalServerErrorResponse);
-    }
-    return res.status(500).send(internalServerErrorResponse2);
   }
 
   /**

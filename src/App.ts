@@ -1,6 +1,7 @@
 import * as bodyParser from "body-parser";
 import * as express from "express";
 import * as logger from "morgan";
+import * as serverlessExpress from "serverless-express/express";
 
 import StartupRouter from "./routes/StartupRouter";
 
@@ -11,7 +12,7 @@ class App {
 
   // Run configuration methods on the Express instance.
   constructor() {
-    this.express = express();
+    this.express = process.env.SERVERLESS ? serverlessExpress() : express();
     this.middleware();
     this.routes();
   }
@@ -35,8 +36,10 @@ class App {
     });
 
     // messages to display to the user at /more-info
-    const message = "I can do much more than just say 'Welcome!', but I'm trapped in Docker and can't get out!";
-    const secondMessage = "Sorry, I don't have any Swagger docs, but I am running in Node.";
+    const message =
+      "I can do much more than just say 'Welcome!', but I'm trapped in Docker and can't get out!";
+    const secondMessage =
+      "Sorry, I don't have any Swagger docs, but I am running in Node.";
 
     let count = 0;
 

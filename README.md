@@ -6,7 +6,7 @@
 [![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
 [![Build Status](https://travis-ci.org/chase-adams/interview-api.png?branch=master)](https://travis-ci.org/chase-adams/interview-api)
 [![Docker Repository](https://quay.io/repository/cadamsio/interview-api/status "Docker Repository")](https://quay.io/repository/cadamsio/interview-api)
-[![GitHub license](https://img.shields.io/badge/licence-MIT-brightgreen.svg)](https://github.com/iliasbhal/serverless-express/blob/master/LICENSE)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
 </div>
 
@@ -30,9 +30,7 @@ If you are a company looking for quality software engineers, whiteboard intervie
 
 1.  Provide a machine for your interviewee to code with, or allow them to use their own (must have Docker installed).
 
-2.  Instruct them to run the command:
-
-`docker run -d --name interview-api -p 3000:3000 chase-adams/interview-api`
+2.  Instruct them to run the command: `docker run -d --name interview-api -p 3000:3000 chase-adams/interview-api`
 
 3.  Don't tell them what the API does, just give them some overall direction (see [below](#a-few-considerations)) and let them build something awesome!
 
