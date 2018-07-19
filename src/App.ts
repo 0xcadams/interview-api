@@ -58,7 +58,7 @@ class App {
       count++;
     });
     this.express.use("/", router);
-    this.express.use("/api/v1/startup", StartupRouter);
+    this.express.use("/startup", StartupRouter);
   }
 }
 
