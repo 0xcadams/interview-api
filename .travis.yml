@@ -7,9 +7,10 @@ jobs:
         - docker
       script:
         - docker build -t cadamsio/interview-api .
-        - npm run semantic-release
+        - yarn install
+        - yarn semantic-release
       after_success:
-        - npm run travis-deploy-once "npm run semantic-release"
+        - yarn travis-deploy-once "npm run semantic-release"
 
 stages:
   - test
