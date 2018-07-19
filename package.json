@@ -25,16 +25,16 @@
     "whiteboard",
     "typescript",
     "node",
+    "serverless",
     "hiring",
-    "hiring-without-whiteboards",
-    "serverless"
+    "hiring-without-whiteboards"
   ],
   "bugs": {
     "url": "https://github.com/chase-adams/interview-api/issues"
   },
   "license": "MIT",
   "engines": {
-    "node": ">=6.0.0"
+    "node": "<=8.10.0"
   },
   "devDependencies": {
     "@types/body-parser": "0.0.33",
