@@ -7,8 +7,6 @@
 
 Tech thought-leaders including [Adrianne Jeffries](https://theoutline.com/post/1166/programmers-are-confessing-their-coding-sins-to-protest-a-broken-job-interview-process?zd=1&zi=76vosc6m), [Anil Dash](https://medium.com/make-better-software/against-the-whiteboard-f1df0013954f), [David Heinemeier Hansson](https://twitter.com/dhh/status/834146806594433025), [Jeff Atwood](https://blog.codinghorror.com/how-to-hire-a-programmer/), [Jon Evans](https://techcrunch.com/2015/03/21/the-terrible-technical-interview/), [Julie Bort](http://www.businessinsider.com/why-an-older-google-contract-programmer-left-google-2016-10), [Max Howell](https://twitter.com/mxcl/status/608682016205344768?lang=en), [Quincy Larson](https://medium.freecodecamp.org/why-is-hiring-broken-it-starts-at-the-whiteboard-34b088e5a5db), projects like [Hiring with Whiteboards](https://github.com/poteto/hiring-without-whiteboards) and [They Whiteboarded Me](http://they.whiteboarded.me/), and companies like [Foursquare](https://engineering.foursquare.com/improving-our-engineering-interview-process-106173ba25a9#.uuih4wg3m), [Slack](https://slack.engineering/a-walkthrough-guide-to-finding-an-engineering-job-at-slack-dc07dd7b0144), [Square](https://medium.com/square-corner-blog/why-we-pair-interview-c2ab4b599bd7), and [WebPT](https://www.webpt.com).
 
-### tl;dr
-
 If you are a company looking for quality developers, whiteboard interviews are a thing of the past.
 
 ## Prerequisites
