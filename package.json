@@ -2,7 +2,7 @@
   "name": "interview-api",
   "version": "0.0.0-development",
   "description": "Simple API with a twist, to challenge interviewees with creative thinking.",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "build": "gulp build",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
@@ -10,8 +10,7 @@
     "serve": "node dist/index.js",
     "start": "gulp start",
     "start:serverless": "serverless offline start",
-    "test": "mocha --reporter spec --compilers ts:ts-node/register 'test/**/*.test.ts'",
-    "travis-deploy-once": "travis-deploy-once"
+    "test": "mocha --reporter spec --compilers ts:ts-node/register 'test/**/*.test.ts'"
   },
   "homepage": "https://github.com/chase-adams/interview-api#readme",
   "repository": {

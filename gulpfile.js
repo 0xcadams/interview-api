@@ -14,7 +14,7 @@ gulp.task("build", () => {
 
 gulp.task("start", ["build"], function(done) {
   nodemon({
-    script: "dist/index.js",
+    script: "dist/src/index.js",
     ext: "ts json",
     env: { NODE_ENV: "development" },
     done: done,

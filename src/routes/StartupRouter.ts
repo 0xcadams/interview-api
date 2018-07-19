@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response, Router } from "express";
-const startupsJson = require("./startups.json"); // tslint:disable-line
+import { default as startupsJson } from "./startups";
 
 const failureRate = 0.3;
 const internalServerErrorResponse = {
