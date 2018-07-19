@@ -13,7 +13,7 @@ provider:
 
 functions:
   app:
-    handler: src/handler.handler
+    handler: handler.handler
     environment:
       SERVERLESS: "true"
     events:
