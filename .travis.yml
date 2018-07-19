@@ -9,8 +9,6 @@ jobs:
         - docker build -t cadamsio/interview-api .
         - yarn install
         - yarn semantic-release
-      after_success:
-        - yarn travis-deploy-once "npm run semantic-release"
 
 stages:
   - test

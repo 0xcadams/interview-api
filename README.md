@@ -1,6 +1,15 @@
 <h1 align="center" style="border-bottom: none;">👨🏽‍💼 interview-api 💻</h1>
 <h3 align="center">Simple API with a twist, to challenge interviewees with creative thinking.</h3>
 
+<div align="center">
+
+[![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
+[![Build Status](https://travis-ci.org/chase-adams/interview-api.png?branch=master)](https://travis-ci.org/chase-adams/interview-api)
+[![Docker Repository](https://quay.io/repository/cadamsio/interview-api/status "Docker Repository")](https://quay.io/repository/cadamsio/interview-api)
+[![GitHub license](https://img.shields.io/badge/licence-MIT-brightgreen.svg)](https://github.com/iliasbhal/serverless-express/blob/master/LICENSE)
+
+</div>
+
 **interview-api** helps promote healthy software hiring practices by providing candidates an opportunity to showcase real-world skills.
 
 ## Inspiration
