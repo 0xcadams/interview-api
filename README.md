@@ -15,7 +15,7 @@ If you are a company looking for quality software engineers, whiteboard intervie
 
 1.  Provide a machine for your interviewee to code with, or allow them to use their own.
 
-2.  Don't tell them what the API does, just give them `https://api.cadams.io/v1/startup` and some overall direction (see [below](#a-few-considerations)) and let them build something awesome!
+2.  Don't tell them what the API does, just give them `https://api.cadams.io/v1/` and some overall direction (see [below](#a-few-considerations)) and let them build something awesome!
 
 ### Local
 
@@ -49,7 +49,7 @@ The goal of this project is to get rid of unnecessary impediments in the intervi
 
 You're going to have these if you're not careful. Once word spreads you use an open-source project and let developers write whatever they want, someone will come in with a pre-baked solution and ace the challenge.
 
-Providing an original, randomized alteration to the instructions is key. Some examples of good guidelines are (please _do not_ use these):
+Providing an original, randomized alteration to your instructions is key. Some examples of good guidelines are (please _do not_ use these):
 
 > Interviewer: Please write an API (in any language) which consumes the _interview-api_ Docker container and gracefully handles any upstream intermittent failures.
 
