@@ -15,7 +15,7 @@ If you are a company looking for quality software engineers, whiteboard intervie
 
 1.  Provide a machine for your interviewee to code with, or allow them to use their own.
 
-2.  Don't tell them what the API does, just give them `https://api.cadams.io/v1/startup` and some overall direction (see [below](#preventing-pre-prepared-solutions)) and let them build something awesome!
+2.  Don't tell them what the API does, just give them `https://api.cadams.io/v1/startup` and some overall direction (see [below](#a-few-considerations)) and let them build something awesome!
 
 ### Local
 
@@ -25,7 +25,7 @@ If you are a company looking for quality software engineers, whiteboard intervie
 
 `docker run -d --name interview-api -p 3000:3000 chase-adams/interview-api`
 
-3.  Don't tell them what the API does, just give them some overall direction (see [below](#preventing-pre-prepared-solutions)) and let them build something awesome!
+3.  Don't tell them what the API does, just give them some overall direction (see [below](#a-few-considerations)) and let them build something awesome!
 
 ### A Few Considerations
 
