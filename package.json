@@ -61,5 +61,12 @@
     "express": "^4.14.0",
     "morgan": "^1.7.0",
     "tslint": "^5.10.0"
+  },
+  "release": {
+    "verifyConditions": "semantic-release-docker",
+    "publish": {
+      "path": "semantic-release-docker",
+      "name": "cadamsio/interview-api"
+    }
   }
 }

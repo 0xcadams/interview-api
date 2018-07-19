@@ -1,16 +1,21 @@
-language: node_js
-cache:
-  directories:
-    - ~/.npm
-notifications:
-  email: false
-node_js:
-  - '10'
-  - '9'
-  - '8'
-  - '6'
-after_success:
-  - npm run travis-deploy-once "npm run semantic-release"
+jobs:
+  include:
+    - stage: release
+      language: node_js
+      node_js: '10'
+      services:
+        - docker
+      script:
+        - docker build -t cadamsio/interview-api .
+        - npm run semantic-release
+      after_success:
+        - npm run travis-deploy-once "npm run semantic-release"
+
+stages:
+  - test
+  - name: release
+    if: branch = master AND type = push AND fork = false
+
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
