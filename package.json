@@ -27,7 +27,8 @@
     "typescript",
     "node",
     "hiring",
-    "hiring-without-whiteboards"
+    "hiring-without-whiteboards",
+    "serverless"
   ],
   "bugs": {
     "url": "https://github.com/chase-adams/interview-api/issues"
