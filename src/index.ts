@@ -8,6 +8,6 @@ app.set("port", port);
 
 const server = http.createServer(app);
 server.listen(port);
-server.on("listening", () => debug(`Listening on ${port}`));
+server.on("listening", () => debug(`Listening on ${port}.`));
 
 module.exports = app;
