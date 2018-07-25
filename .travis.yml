@@ -6,7 +6,7 @@ jobs:
       services:
         - docker
       script:
-        - docker build -t cadamsio/interview-api .
+        - docker build -t chaseadams/interview-api .
         - yarn semantic-release
         - sls deploy --stage prod
 

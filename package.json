@@ -72,7 +72,7 @@
     "verifyConditions": "semantic-release-docker",
     "publish": {
       "path": "semantic-release-docker",
-      "name": "cadamsio/interview-api"
+      "name": "chaseadams/interview-api"
     },
     "npmPublish": false
   }
