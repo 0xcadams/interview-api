@@ -11,9 +11,7 @@ server.listen(port);
 server.on("listening", onListening);
 
 function onListening(): void {
-  const addr = server.address();
-  const bind = (typeof addr === "string") ? `pipe ${addr}` : `port ${addr.port}`;
-  debug(`Listening on ${bind}`);
+  debug(`Listening on ${port}`);
 }
 
 module.exports = app;
