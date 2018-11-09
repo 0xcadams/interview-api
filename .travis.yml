@@ -8,7 +8,7 @@ jobs:
       script:
         - docker build -t chaseadams/interview-api .
         - yarn semantic-release
-        - sls deploy --stage prod
+        - yarn build && yarn deploy
 
 stages:
   - test
