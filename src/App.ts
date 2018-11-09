@@ -2,7 +2,6 @@ import * as bodyParser from "body-parser";
 import * as express from "express";
 import * as helmet from "helmet";
 import * as logger from "morgan";
-import * as serverlessExpress from "serverless-express/express";
 
 import StartupRouter from "./routes/StartupRouter";
 
@@ -13,7 +12,7 @@ class App {
 
   // Run configuration methods on the Express instance.
   constructor() {
-    this.express = process.env.SERVERLESS ? serverlessExpress() : express();
+    this.express = express();
     this.middleware();
     this.routes();
   }
@@ -57,8 +56,8 @@ class App {
       }
       count++;
     });
-    this.express.use("/", router);
-    this.express.use("/v1/startup", StartupRouter);
+    this.express.use("/api/v1/interview/", router);
+    this.express.use("/api/v1/interview/startup", StartupRouter);
   }
 }
 

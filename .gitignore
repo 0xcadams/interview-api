@@ -1,4 +1,11 @@
 .DS_Store
 node_modules
-dist/
-.serverless/
+lib/
+*.log
+
+## Compiled JavaScript files
+**/*.js
+**/*.js.map
+
+# Typescript v1 declaration files
+typings/

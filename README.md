@@ -3,7 +3,6 @@
 
 <div align="center">
 
-[![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
 [![Build Status](https://travis-ci.org/chase-adams/interview-api.png?branch=master)](https://travis-ci.org/chase-adams/interview-api)
 [![Docker Repository](https://img.shields.io/docker/build/chaseadams/interview-api.svg)](https://hub.docker.com/r/chaseadams/interview-api/)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
@@ -24,7 +23,7 @@ If you are a company looking for quality software engineers, whiteboard intervie
 
 1.  Provide a machine for your interviewee to code with, or allow them to use their own.
 
-2.  Don't tell them what the API does, just give them `https://api.cadams.io/v1/` and some overall direction (see [below](#a-few-considerations)) and let them build something awesome!
+2.  Don't tell them what the API does, just give them `https://cadams.io/api/v1/interview/` and some overall direction (see [below](#a-few-considerations)) and let them build something awesome!
 
 ### Local
 
