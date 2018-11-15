@@ -4,6 +4,7 @@ import * as helmet from "helmet";
 import * as logger from "morgan";
 import * as serverlessExpress from "serverless-express/express";
 
+import NobelPrizeRouter from "./routes/NobelPrizeRouter";
 import StartupRouter from "./routes/StartupRouter";
 
 // Creates and configures an ExpressJS web server.
@@ -59,6 +60,7 @@ class App {
     });
     this.express.use("/", router);
     this.express.use("/v1/startup", StartupRouter);
+    this.express.use("/v1/nobelprize", NobelPrizeRouter);
   }
 }
 
